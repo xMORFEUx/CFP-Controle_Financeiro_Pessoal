@@ -1,10 +1,9 @@
-package com.example.cfp;
+package com.example.ss;
 
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Html;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,10 +12,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.cfp.databinding.ActivityCadastroBinding;
+import com.example.ss.databinding.ActivityCadastroBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.AuthResult;
@@ -29,8 +26,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -66,7 +61,6 @@ public class Cadastro_Activity extends AppCompatActivity {
         getSupportActionBar().hide();
         IniciarComponentes();
 
-
         bt_cadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -75,7 +69,6 @@ public class Cadastro_Activity extends AppCompatActivity {
                 String email = edit_email_new.getText().toString();
                 String senha = edit_senha_new.getText().toString();
                 String senha2 = edit_senha_new_2.getText().toString();
-
 
                 if (nome.isEmpty() || email.isEmpty() || senha.isEmpty() || senha2.isEmpty()) {
 
@@ -97,11 +90,9 @@ public class Cadastro_Activity extends AppCompatActivity {
                         snackbar.show();
 
                     }
-
                 }
             }
         });
-
 
         binding.textTelaLogin.setOnClickListener(new View.OnClickListener() {
 
@@ -155,17 +146,14 @@ public class Cadastro_Activity extends AppCompatActivity {
                     snackbar.setTextColor(Color.BLACK);
                     snackbar.show();
                 }
-
             }
         });
-
     }
 
     private void SalvarDadosUsuario(){
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         usuariosRef = database.getReference("Usuarios");
-
         usuariosRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -174,14 +162,6 @@ public class Cadastro_Activity extends AppCompatActivity {
                 usuarioID = FirebaseAuth.getInstance().getCurrentUser().getUid();
                 String nome = edit_name.getText().toString();
                 String email = edit_email_new.getText().toString();
-//        double renda = 0;
-//        double gastos = 0;
-//        double gasto_edu = 0;
-//        double gasto_ali = 0;
-//        double gasto_laz = 0;
-//        double gasto_sau = 0;
-//        double gasto_tra = 0;
-//        double gasto_out = 0;
 
                 FirebaseDatabase db = FirebaseDatabase.getInstance();
 
@@ -189,14 +169,6 @@ public class Cadastro_Activity extends AppCompatActivity {
                 usuarios.put("UID",usuarioID);
                 usuarios.put("nome",nome);
                 usuarios.put("email",email);
-//        usuarios.put("renda",renda);
-//        usuarios.put("gastos",gastos);
-//        usuarios.put("gasto_edu",gasto_edu);
-//        usuarios.put("gasto_ali",gasto_ali);
-//        usuarios.put("gasto_laz",gasto_laz);
-//        usuarios.put("gasto_sau",gasto_sau);
-//        usuarios.put("gasto_tra",gasto_tra);
-//        usuarios.put("gasto_out",gasto_out);
 
                 firebaseDatabase = FirebaseDatabase.getInstance();
                 databaseReference = firebaseDatabase.getReference();
@@ -217,12 +189,12 @@ public class Cadastro_Activity extends AppCompatActivity {
 
     private void IniciarComponentes(){
 
-        text_tela_login = findViewById(R.id.text_tela_login);
-        edit_name = findViewById(R.id.edit_name);
-        edit_email_new = findViewById(R.id.edit_email_new);
-        edit_senha_new = findViewById(R.id.edit_senha_new);
-        edit_senha_new_2 = findViewById(R.id.edit_senha_new_2);
-        bt_cadastrar = findViewById(R.id.bt_cadastrar);
+        text_tela_login = binding.textTelaLogin;
+        edit_name = binding.editName;
+        edit_email_new = binding.editEmailNew;
+        edit_senha_new = binding.editSenhaNew;
+        edit_senha_new_2 = binding.editSenhaNew2;
+        bt_cadastrar = binding.btCadastrar;
 
     }
 

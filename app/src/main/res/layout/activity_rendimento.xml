@@ -6,8 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layoutDescription="@xml/activity_categorias_scene"
-    tools:context=".Rendimento_Activity"
-    android:background="@color/white">
+    tools:context="com.example.ss.Rendimento_Activity"
+    android:background="#D1D1D1">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -18,94 +18,47 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <ImageView
-        android:layout_width="238dp"
-        android:layout_height="259dp"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/wallet"
-        app:layout_constraintEnd_toEndOf="@id/containerCompoments_2"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="@id/containerCompoments_2"
-        app:layout_constraintTop_toBottomOf="@id/bt_renda" />
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/imageView2"/>
 
-    <TextView
-        android:id="@+id/txt_objtv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:layout_marginBottom="55dp"
-        android:textSize="20sp"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="@id/containerCompoments_2"
-        app:layout_constraintStart_toStartOf="@id/containerCompoments_2"
-        app:layout_constraintBottom_toTopOf="@id/ValorSeek"/>
 
-    <TextView
-        android:id="@+id/txt_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:text="@string/renda"
-        android:textSize="13sp"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@id/containerCompoments_2"
-        app:layout_constraintBottom_toTopOf="@id/seekBar"/>
-
-    <View
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/containerCompoments_2"
-        android:layout_width="350dp"
-        android:layout_height="613dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="130dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imageView2" />
 
-    <SeekBar
-        android:background="@drawable/button"
-        style="@style/SeekBar"
-        android:id="@+id/seekBar"
-        android:max="20000"
-        app:layout_constraintStart_toStartOf="@id/containerCompoments_2"
-        app:layout_constraintEnd_toEndOf="@id/containerCompoments_2"
-        app:layout_constraintTop_toTopOf="@id/containerCompoments_2" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/bt_renda"
-        style="@style/Button"
-        android:text="@string/rendamensal"
-        android:layout_marginTop="60dp"
-        app:layout_constraintStart_toStartOf="@id/containerCompoments_2"
-        app:layout_constraintEnd_toEndOf="@id/containerCompoments_2"
-        app:layout_constraintTop_toBottomOf="@id/seekBar"
-
-        />
-
     <TextView
-        android:layout_width="60dp"
+        android:id="@+id/valor"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="R$"
-        android:textStyle="bold"
-        android:layout_marginBottom="41dp"
-        android:textColor="@color/black"
-        android:textSize="35sp"
-        android:gravity="center"
-        app:layout_constraintStart_toStartOf="@id/containerCompoments_2"
-        app:layout_constraintBottom_toTopOf="@id/seekBar"/>
-        />
+        app:layout_constraintTop_toBottomOf="@id/imageView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="50dp"
+        android:elevation="2dp"
+        android:text="Valor total do Setup: R$ 21.396"
+        android:textSize="23sp"
+        android:textColor="@android:color/holo_green_dark"
+        android:textStyle="bold"/>
 
-    <EditText
-        android:id="@+id/ValorSeek"
-        android:layout_marginLeft="60dp"
-        android:layout_width="290dp"
-        android:textStyle="bold"
-        android:text=""
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:inputType="number"
-        android:textColor="@color/black"
-        android:textSize="35sp"
-        app:layout_constraintStart_toStartOf="@id/containerCompoments_2"
-        app:layout_constraintBottom_toTopOf="@id/seekBar"/>
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/back"
+        android:elevation="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

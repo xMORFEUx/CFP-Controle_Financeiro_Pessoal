@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CFP</string>
+    <string name="app_name">SetupSwift</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="logo">logo</string>
@@ -11,7 +11,7 @@
     <string name="previous">Previous</string>
     <string name="ObjetivoInicial">Informe sua renda mensal</string>
     <string name="GastosFixos">Definir Gastos Fixos</string>
-    <string name="renda"><i>Informe sua renda mensal</i></string>
+    <string name="renda"><i>Informe quanto pretende gastar no seu Setup</i></string>
     <string name="email">E-mail</string>
     <string name="senha">Senha</string>
     <string name="Cadastrar">Cadastre-se Gratuitamente</string>
@@ -20,10 +20,10 @@
     <string name="gasto"><i>Informe quanto pretende gastar por mês</i></string>
     <string name="Categoria_par"><i>Defina seu Orçamento Fixo Mensal por Categoria</i></string>
     <string name="Objetivo">Informe seu Objetivo de Gasto Mensal</string>
-    <string name="Rendimento">Definir Rendimento Mensal</string>
+    <string name="Rendimento">Definir sua Necessidade</string>
     <string name="Categorias">Categorias de Gastos Fixos</string>
     <string name="Categoria_Titulo"><b>CATEGORIAS</b></string>
-    <string name="rendamensal"><b>Definir Renda Mensal</b></string>
+    <string name="questionario"><b>Definir Tipo de Setup</b></string>
     <string name="educacao">Educação</string>
     <string name="alimentacao">Alimentação</string>
     <string name="lazer">Lazer</string>
@@ -33,7 +33,7 @@
     <string name="salvar">Salvar</string>
     <string name="cancelar">Cancelar</string>
     <string name="valor_lc">Valor total lançado:</string>
-    <string name="text_cat"><i>Para ajudar você precisamos definir um objetivo</i></string>
+    <string name="text_cat"><i>Pra te ajudar da melhor maneira possível, precisamos entender um pouco a sua necessidade</i></string>
     <string name="text_acesso">Já possui uma conta? <u>Logar</u></string>
     <string name="text_cadastro">Primeiro Acesso? <u>Cadastre-se</u></string>
     <string name="title_activity_categorias">Categorias_Activity</string>
@@ -43,6 +43,9 @@
     <string name="despesa_perfil"><u><i>Despesas por Categoria</i></u></string>
     <string name="Sair">Sair</string>
     <string name="saldo_atual"><u><i>Saldo Atual</i></u></string>
-    <string name="extrato">Ir para Extrato</string>
-    <string name="txt_ext"><i>Já efetuou os lançamentos? Clique abaixo para ir direto para o seu extrato</i></string>
+    <string name="extrato">Acessar Perfil</string>
+    <string name="txt_ext"><i>Já se apresentou? Clique abaixo para ir direto ao seu perfil</i></string>
+    <string name="question_1">1º - Que tipo de atividade você planeja desenvolver com seu novo Setup?</string>
+    <string name="question_2">2º - Quanto você pretende gastar no seu novo Setup?</string>
+    <string name="question_3">3º - Você pretende fazer um Upgrade a longo prazo?</string>
 </resources>

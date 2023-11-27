@@ -1,4 +1,4 @@
-package com.example.cfp;
+package com.example.ss;
 
 import org.junit.Test;
 

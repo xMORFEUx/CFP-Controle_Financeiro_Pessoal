@@ -16,91 +16,225 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:layout_width="238dp"
-        android:layout_height="259dp"
-        android:layout_marginTop="120dp"
-        android:background="@drawable/ic_gasto"
-        app:layout_constraintEnd_toEndOf="@id/containerCompoments_2"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="@id/containerCompoments_2"
-        app:layout_constraintTop_toBottomOf="@id/seekBar" />
-
-    <TextView
-        android:id="@+id/txt_objtv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="55dp"
-        android:textSize="20sp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@id/containerCompoments_2"
-        app:layout_constraintStart_toStartOf="@id/containerCompoments_2"
-        app:layout_constraintBottom_toTopOf="@id/ValorSeek"/>
-
-    <TextView
-        android:id="@+id/txt_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:text="@string/gasto"
-        android:textSize="13sp"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@id/containerCompoments_2"
-        app:layout_constraintBottom_toTopOf="@id/seekBar"/>
-
     <View
         android:id="@+id/containerCompoments_2"
         android:layout_width="350dp"
         android:layout_height="613dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imageView2" />
 
-    <SeekBar
-        android:background="@drawable/button"
-        style="@style/SeekBar"
-        android:id="@+id/seekBar"
-        android:max="20000"
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ativos"
+        app:layout_constraintTop_toTopOf="@id/containerCompoments_2"
         app:layout_constraintStart_toStartOf="@id/containerCompoments_2"
-        app:layout_constraintEnd_toEndOf="@id/containerCompoments_2"
-        app:layout_constraintTop_toTopOf="@id/containerCompoments_2" />
+        app:layout_constraintEnd_toEndOf="@id/containerCompoments_2"/>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/bt_objetivo"
-        style="@style/Button"
-        android:text="@string/GastosFixos"
-        android:layout_marginBottom="80dp"
-        app:layout_constraintStart_toStartOf="@id/containerCompoments_2"
-        app:layout_constraintEnd_toEndOf="@id/containerCompoments_2"
-        app:layout_constraintTop_toBottomOf="@id/seekBar" />
 
     <TextView
-        android:layout_width="60dp"
+        android:id="@+id/question_1"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:text="R$"
-        android:textStyle="bold"
-        android:layout_marginBottom="41dp"
+        android:layout_marginTop="130dp"
         android:textColor="@color/black"
-        android:textSize="35sp"
-        android:gravity="center"
-        app:layout_constraintStart_toStartOf="@id/containerCompoments_2"
-        app:layout_constraintBottom_toTopOf="@id/seekBar"/>
-    />
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="@string/question_1"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="@id/containerCompoments_2"
+        app:layout_constraintStart_toStartOf="@id/containerCompoments_2"/>
 
-    <EditText
-        android:id="@+id/ValorSeek"
-        android:layout_marginLeft="60dp"
-        android:layout_width="290dp"
+    <TextView
+        android:id="@+id/txt_load"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:text=""
-        android:layout_marginBottom="30dp"
-        android:inputType="number"
         android:textColor="@color/black"
-        android:textSize="35sp"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textStyle="italic"
+        android:visibility="gone"
+        android:text="Aguarde, estamos montando o melhor setup para você..."
+        app:layout_constraintEnd_toEndOf="@id/containerCompoments_2"
         app:layout_constraintStart_toStartOf="@id/containerCompoments_2"
-        app:layout_constraintBottom_toTopOf="@id/seekBar"/>
+        app:layout_constraintTop_toBottomOf="@id/progressbar"/>
+
+
+    <LinearLayout
+        android:id="@+id/questionario_1"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@id/containerCompoments_2"
+        app:layout_constraintTop_toBottomOf="@id/question_1"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/jogos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:checked="false"
+            android:text="Jogos Eletrônicos"/>
+
+        <CheckBox
+            android:id="@+id/trabalho"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:layout_marginTop="10dp"
+            android:text="Trabalho"/>
+
+        <CheckBox
+            android:id="@+id/edicao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:layout_marginTop="10dp"
+            android:text="Edição de Vídeos / Fotos"/>
+
+        <CheckBox
+            android:id="@+id/web"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:layout_marginTop="10dp"
+            android:text="Atividades Simples (Navegar na Web)"/>
+
+        <CheckBox
+            android:id="@+id/estudo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:layout_marginTop="10dp"
+            android:text="Estudo"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/questionario_2"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/containerCompoments_2"
+        app:layout_constraintTop_toBottomOf="@id/question_1"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/valor_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:layout_marginTop="40dp"
+            android:text="Entre R$1.500 à R$2.000"/>
+
+        <CheckBox
+            android:id="@+id/valor_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:layout_marginTop="10dp"
+            android:text="Entre R$2.000 à R$2.500"/>
+
+        <CheckBox
+            android:id="@+id/valor_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:layout_marginTop="10dp"
+            android:text="Entre R$ 2.500 à R$ 3.000"/>
+
+        <CheckBox
+            android:id="@+id/valor_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:layout_marginTop="10dp"
+            android:text="Acima de R$ 3.000"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/questionario_3"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/containerCompoments_2"
+        app:layout_constraintTop_toBottomOf="@id/question_1"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/sim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:layout_marginTop="40dp"
+            android:text="Sim"/>
+
+        <CheckBox
+            android:id="@+id/nao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:layout_marginTop="40dp"
+            android:text="Não"/>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_avancar"
+        style="@style/Button"
+        android:text="Próximo"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintStart_toStartOf="@id/containerCompoments_2"
+        app:layout_constraintEnd_toEndOf="@id/containerCompoments_2"
+        app:layout_constraintBottom_toBottomOf="@id/containerCompoments_2" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_avancar_2"
+        style="@style/Button"
+        android:text="Próximo"
+        android:layout_marginBottom="50dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/containerCompoments_2"
+        app:layout_constraintEnd_toEndOf="@id/containerCompoments_2"
+        app:layout_constraintBottom_toBottomOf="@id/containerCompoments_2" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_avancar_3"
+        style="@style/Button"
+        android:text="Próximo"
+        android:layout_marginBottom="50dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/containerCompoments_2"
+        app:layout_constraintEnd_toEndOf="@id/containerCompoments_2"
+        app:layout_constraintBottom_toBottomOf="@id/containerCompoments_2" />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:indeterminateTint="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/containerCompoments_2"
+        app:layout_constraintStart_toStartOf="@id/containerCompoments_2"
+        app:layout_constraintBottom_toBottomOf="@id/containerCompoments_2"
+        android:layout_marginBottom="280dp"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/back"
+        android:elevation="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

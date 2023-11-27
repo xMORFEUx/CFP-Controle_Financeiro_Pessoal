@@ -1,6 +1,7 @@
-package com.example.cfp;
+package com.example.ss;
 
-import static android.content.ContentValues.TAG;
+import static com.google.android.gms.auth.api.signin.GoogleSignInOptions.DEFAULT_SIGN_IN;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,7 +19,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.cfp.databinding.ActivityLoginBinding;
+import com.example.ss.databinding.ActivityLoginBinding;
 import com.google.android.gms.auth.api.identity.BeginSignInRequest;
 import com.google.android.gms.auth.api.identity.SignInClient;
 import com.google.android.gms.auth.api.identity.SignInCredential;
@@ -83,7 +84,7 @@ public class Login_Activity extends AppCompatActivity {
 
 //        binding.textEsqSenha.setText(Html.fromHtml(senha + alterar));
 
-        GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+        GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions.Builder(DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
                 .build();

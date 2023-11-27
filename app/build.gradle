@@ -4,11 +4,12 @@ plugins {
 }
 
 android {
-    namespace 'com.example.cfp'
-    compileSdk 33
+    namespace 'com.example.ss'
+    compileSdkVersion 33
+    buildToolsVersion '33.0.1'
 
     defaultConfig {
-        applicationId "com.example.cfp"
+        applicationId "com.example.ss"
         minSdk 21
         targetSdk 33
         versionCode 1
@@ -24,8 +25,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
     buildFeatures {
         viewBinding true
@@ -34,13 +35,10 @@ android {
     dataBinding{
         enable = true
     }
-
-
 }
 
 dependencies {
 
-    implementation 'com.google.android.material:material:1.0.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
@@ -60,8 +58,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:20.2.1'
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
     implementation 'com.github.AnyChart:AnyChart-Android:1.1.2'
-    implementation("androidx.multidex:multidex:2.0.1")
+    implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'com.github.blackfizz:eazegraph:1.2.5l@aar'
-    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
 
 }

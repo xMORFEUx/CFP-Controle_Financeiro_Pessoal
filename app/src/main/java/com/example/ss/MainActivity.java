@@ -1,4 +1,4 @@
-package com.example.cfp;
+package com.example.ss;
 
 import android.os.Bundle;
 
@@ -14,11 +14,11 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import com.example.cfp.databinding.ActivityMainBinding;
+import com.example.ss.databinding.ActivityMainBinding;
+import com.example.ss.R;
 
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 

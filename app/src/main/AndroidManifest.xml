@@ -3,46 +3,42 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/logo_setupswift"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.CFP"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".Perfil_Activity"
+            android:name="com.example.ss.Perfil_Activity"
             android:exported="false" />
         <activity
-            android:name=".Extrato_Activity"
+            android:name="com.example.ss.Extrato_Activity"
             android:exported="false" />
         <activity
-            android:name=".Categorias_Activity"
+            android:name="com.example.ss.Gastos_Activity"
             android:exported="false" />
         <activity
-            android:name=".Gastos_Activity"
+            android:name="com.example.ss.Rendimento_Activity"
             android:exported="false" />
         <activity
-            android:name=".Rendimento_Activity"
+            android:name="com.example.ss.PrimeirosPassos_Activity"
             android:exported="false" />
         <activity
-            android:name=".PrimeirosPassos_Activity"
+            android:name="com.example.ss.TelaPrincipal"
             android:exported="false" />
         <activity
-            android:name=".TelaPrincipal"
+            android:name="com.example.ss.Cadastro_Activity"
             android:exported="false" />
         <activity
-            android:name=".Cadastro_Activity"
+            android:name="com.example.ss.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Login_Activity"
+            android:name="com.example.ss.Login_Activity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.CFP.NoActionBar"
